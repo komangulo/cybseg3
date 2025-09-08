@@ -1,0 +1,84 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 70% 3%;
+    --foreground: 0 0% 98%;
+
+    --card: 260 70% 7%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 260 70% 7%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 265 80% 75%;
+    --primary-foreground: 260 70% 10%;
+
+    --secondary: 260 40% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 260 40% 20%;
+    --muted-foreground: 260 40% 70%;
+
+    --accent: 260 40% 20%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 40% 15%;
+    --input: 260 40% 15%;
+    --ring: 260 85% 75%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-cyber-bg-dark text-foreground;
+  }
+}
+
+@layer components {
+  .cyber-gradient-text {
+    @apply bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent;
+  }
+  
+  .cyber-card {
+    @apply bg-cyber-card-bg border border-purple-900/30 rounded-lg p-6 backdrop-blur-sm;
+  }
+  
+  .cyber-btn {
+    @apply bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-700 hover:to-purple-900 text-white font-medium py-2 px-4 rounded-md transition-all duration-200;
+  }
+  
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold mb-8 text-center;
+  }
+  
+  .service-card {
+    @apply cyber-card transition-all duration-300 hover:border-purple-500/50 hover:shadow-[0_0_15px_rgba(155,135,245,0.15)];
+  }
+  
+  .grid-pattern {
+    background-image: radial-gradient(rgba(155, 135, 245, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+  }
+}
